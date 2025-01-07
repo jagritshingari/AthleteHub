@@ -1,8 +1,9 @@
 package com.gym.AthleteHub.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.*;
-
 import java.util.Date;
 import java.util.List;
 
