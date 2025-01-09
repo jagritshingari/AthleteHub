@@ -10,18 +10,18 @@ import com.gym.AthleteHub.model.Gym;
 public interface GymService {
 
 //	create 
-	ResponseEntity<Object> createGym(Gym gym);
+	Gym createGym(Gym gym);
 	
 //	update
-	ResponseEntity<Object> updateGym(String gymId,Gym gym);
+	Gym updateGym(String gymId,Gym gym);
 	
 //	delete
-	ResponseEntity<Object> deleteGym(String gymId);
+	void deleteGym(String gymId);
 	
 //	get all gym
 	PageableResponse<Gym> getAll(int pageNumber,int pageSize,String sortBy,String sortDir);
 	
-	ResponseEntity<Object> get(String gymId);
+	Gym get(String gymId);
 	
 	
 //	search gym by keyword

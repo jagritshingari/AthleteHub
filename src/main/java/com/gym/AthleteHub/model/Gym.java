@@ -5,6 +5,7 @@ import java.util.List;
 import com.gym.AthleteHub.hubutil.HubUtil;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
@@ -27,7 +28,7 @@ public class Gym {
     private String address;
     private Long contactNumber;
 
-    @OneToMany(mappedBy = "gym")
+    @OneToMany(mappedBy = "gym",fetch = FetchType.LAZY)
     private List<GymUsers> gymUser;
     
  // Generate a random 5-character alphanumeric ID

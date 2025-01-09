@@ -37,6 +37,7 @@ public class GymUsers {
     };
 
     private Date createdAt;
+    
     @OneToOne(mappedBy = "gymUsers")
     private Profiles profiles;
 
